@@ -453,6 +453,19 @@
 </div>
 
 <script>
+  <script>
+  // ==================== 🔐 夹在这里：SUPABASE 魔法连接初始化 ====================
+  const SUPABASE_URL = "https://zusijgpsyhnsjvsdfgge.supabase.co";
+  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1c2lqZ3BzeWhuc2p2c2RmZ2dlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA5NjI0MDMsImV4cCI6MjA5NjUzODQwM30.fULhx8xWE9twfgC9KAkwfz3eaNNfXjPvSQOOLzg-ANw";
+  
+  // 初始化客户端，这样下面所有的游戏函数都能直接使用 supabase 变量了
+  const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  // =========================================================================
+
+  const CAT = {
+    character:{zh:'人物',en:'Character'},
+    place:{zh:'地点',en:'Place'},
+    // ... 下面保持你原有的庞大游戏代码完全不变 ...
 const CAT = {
   character:{zh:'人物',en:'Character'},
   place:{zh:'地点',en:'Place'},
